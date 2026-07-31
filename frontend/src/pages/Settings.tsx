@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import { Settings as SettingsIcon, Save, Loader2, Plus, Trash2 } from 'lucide-react';
 import api from '../api/axios';

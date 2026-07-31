@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend, LineChart, Line, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { ResponsiveContainer, Tooltip, LineChart, Line, XAxis, YAxis, CartesianGrid } from 'recharts';
 import { Plus, DollarSign, Activity, FileText, Loader2, Target, AlertTriangle, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import api from '../api/axios';
 import ErrorBoundary from '../components/ErrorBoundary';
 
-const COLORS = ['#6366f1', '#8b5cf6', '#ec4899', '#14b8a6', '#f59e0b', '#3b82f6'];
 
 export default function Dashboard() {
   const [stats, setStats] = useState<any>(null);
@@ -176,7 +175,7 @@ export default function Dashboard() {
                             <XAxis dataKey="date" axisLine={false} tickLine={false} tick={{fill: '#6b7280', fontSize: 12}} dy={10} />
                             <YAxis axisLine={false} tickLine={false} tick={{fill: '#6b7280', fontSize: 12}} tickFormatter={(value) => `$${value}`} dx={-10} />
                             <Tooltip 
-                                formatter={(value: number) => [`$${value.toFixed(2)}`, 'Spent']}
+                                formatter={(value: any) => [`$${Number(value).toFixed(2)}`, 'Spent']}
                                 contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
                             />
                             <Line type="monotone" dataKey="amount" stroke="#6366f1" strokeWidth={3} dot={{r: 4, fill: '#6366f1', strokeWidth: 2, stroke: '#fff'}} activeDot={{r: 6}} />
