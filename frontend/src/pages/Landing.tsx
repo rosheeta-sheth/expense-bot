@@ -42,7 +42,7 @@ export default function Landing() {
               Sign In
             </Link>
             <Link
-              to="/login"
+              to="/signup"
               className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg hover:shadow-primary-500/30"
             >
               Get Started
@@ -63,7 +63,7 @@ export default function Landing() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
             <Link
-              to="/login"
+              to="/signup"
               className="w-full sm:w-auto flex items-center justify-center bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
             >
               Start Tracking Free <ArrowRight className="ml-2 w-5 h-5" />
